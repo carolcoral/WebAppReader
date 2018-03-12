@@ -37,19 +37,22 @@ window.onload = function() {
 
 	var Win = $(window);
 	var Doc = $(document);
+	var readerModel;
+	var readUI;
+
 	var RootContainer = $("#fiction_container");
-	var initFontSize = Util.StorageGetter("font-size");
+	var initFontSize = Util().StorageGetter("font_size");
 	initFontSize = parseInt(initFontSize);
 	if(!initFontSize) {
 		initFontSize = 14;
 	}
 	RootContainer.css("font-size", initFontSize);
 
-	var init_reader_bg_color = Util.StorageGetter("reader_bg_color");
+	var init_reader_bg_color = Util().StorageGetter("reader_bg_color");
 	$("body").css("background-color", init_reader_bg_color);
 
 	//	封装本地存储功能
-	var Util = (function() {
+	function Util() {
 		var prefix = "html5_reader_";
 		var StorageGetter = function(key) {
 			return localStorage.getItem(prefix + key);
@@ -64,22 +67,25 @@ window.onload = function() {
 				callback: "duokan_fiction_chapter",
 				success: function(result) {
 					var data = $.base64.decode(result);
-					var json = $.decodeURIComponent(escape(data));
-					callback(data);
+					var json = decodeURIComponent(escape(data));
+					callback(json);
 				}
 			});
 		}
 		return {
-			getBSONP = getBSONP;
+			getBSONP: getBSONP,
 			StorageGetter: StorageGetter,
 			StorageSetter: StorageSetter
 		}
-	})();
+	}
 
 	function main() {
 		//      todo 整个项目的入口函数
-		var readerModel = ReaderModel();
-		readerModel.init();
+		readerModel = ReaderModel();
+		readUI = ReaderBaseFrame(RootContainer);
+		readerModel.init(function(data) {
+			readUI(data);
+		});
 		EventHanlder();
 		ReaderBaseFrame();
 	}
@@ -87,10 +93,12 @@ window.onload = function() {
 	function ReaderModel() {
 		//		todo 实现和阅读器数据交互的方法
 		var Chapter_id;
-		var init = function() {
+		var ChapterTotol;
+		var init = function(UIcallback) {
 			getFictionInfo(function() {
-				getCurChapterContent(Chapter_id, function() {
+				getCurChapterContent(Chapter_id, function(data) {
 					//					todo
+					UIcallback && UIcallback(data);
 				});
 			});
 		}
@@ -98,28 +106,57 @@ window.onload = function() {
 			$.get("data/chapter.json", function(data) {
 				//				获得章节信息的回调
 				//				debugger;
-				Chapter_id = data.chapters[0].chapter_id;
+				Chapter_id = Util().StorageGetter("last_Chapter_id");
+				if(!Chapter_id) {
+					Chapter_id = data.chapters[0].chapter_id;
+				}
+				ChapterTotol = data.chapters.length;
 				callback && callback();
 			}, "json");
 
 		}
-		var getCurChapterContent = function(chapter_id, data) {
-			$.get("data/data" + chapter_id + "json", function(data) {
+		var getCurChapterContent = function(chapter_id, callback) {
+			$.get("data/data" + chapter_id + ".json", function(data) {
 				if(data.result == 0) {
 					var url = data.jsonp;
-					Util.getBSONP(url, function(data) {
+					Util().getBSONP(url, function(data) {
 						callback && callback(data);
 					});
 				}
 			}, "json");
 		}
+		//翻页功能
+		var prevChapter = function(UIcallback) {
+			Chapter_id = parseInt(Chapter_id, 10);
+			if(Chapter_id == 0) {
+				return;
+			}
+			Chapter_id -= 1;
+			Util().StorageSetter("last_Chapter_id", Chapter_id);
+			getCurChapterContent(Chapter_id, function(data) {
+				UIcallback && UIcallback(data);
+			});
+		}
+		var nextChapter = function(UIcllback) {
+			Chapter_id = parseInt(Chapter_id, 10);
+			if(Chapter_id == ChapterTotol) {
+				return;
+			}
+			Chapter_id += 1;
+			Util().StorageSetter("last_Chapter_id", Chapter_id);
+			getCurChapterContent(Chapter_id, function(data) {
+				UIcllback && UIcllback(data);
+			});
+		}
 		return {
-			init: init
+			init: init,
+			prevChapter: prevChapter,
+			nextChapter: nextChapter
 		}
 
 	}
 
-	function ReaderBaseFrame() {
+	function ReaderBaseFrame(container) {
 		//		todo 渲染基本的 UI 结构
 		Dom.js_menu_img.find("img").attr("src", menu_img);
 		Dom.js_font_change.find("img").attr("src", font_change_img);
@@ -127,8 +164,20 @@ window.onload = function() {
 		Dom.js_nav_pannel.css("display", "none");
 		Dom.js_bk_container_color_1.css("background", "#FFCCCC");
 		Dom.js_bk_container_color_2.css("background", "#003366");
-		Dom.js_bk_container_color_3.css("background", "#CCCCCC");
+		Dom.js_bk_container_color_3.css("background", "#e9dfc7");
 		Dom.js_bk_container_color_4.css("background", "#333399");
+
+		function parseChapterData(jsonData) {
+			var jsonObj = JSON.parse(jsonData);
+			var html = "<h4>" + jsonObj.t + "</h4>";
+			for(var i = 0; i < jsonObj.p.length; i++) {
+				html += "<p>" + jsonObj.p[i] + "</p>";
+			}
+			return html;
+		}
+		return function(data) {
+			container.html(parseChapterData(data));
+		}
 
 	}
 
@@ -139,12 +188,12 @@ window.onload = function() {
 		//		底部菜单切换
 		//		字体选项切换
 		Dom.js_font.click(function() {
-			if(Dom.js_font_change.find("img").attr("src") == font_change_img) {
-				Dom.js_font_change.find("img").attr("src", font_click_img);
-				Dom.js_nav_pannel.css("display", "block");
-			} else {
+			if(Dom.js_font_change.find("img").attr("src") == font_click_img || Dom.js_nav_pannel.css("display") == "block") {
 				Dom.js_font_change.find("img").attr("src", font_change_img);
 				Dom.js_nav_pannel.css("display", "none");
+			} else {
+				Dom.js_font_change.find("img").attr("src", font_click_img);
+				Dom.js_nav_pannel.css("display", "block");
 			}
 		});
 		//		白天-夜间切换
@@ -156,7 +205,7 @@ window.onload = function() {
 			} else {
 				Dom.js_night_img.find("img").attr("src", night_img);
 				Dom.js_night_font.text("夜间");
-				$("body").css("background-color", "#e9dfc7");
+				$("body").css("background-color", Util().StorageGetter("reader_bg_color"));
 			}
 		});
 
@@ -167,7 +216,7 @@ window.onload = function() {
 			}
 			initFontSize += 1;
 			RootContainer.css("font-size", initFontSize);
-			Util.StorageSetter("font_size", initFontSize);
+			Util().StorageSetter("font_size", initFontSize);
 
 		});
 		$("#small-font").click(function() {
@@ -176,30 +225,30 @@ window.onload = function() {
 			}
 			initFontSize -= 1;
 			RootContainer.css("font-size", initFontSize);
-			Util.StorageSetter("font_size", initFontSize);
+			Util().StorageSetter("font_size", initFontSize);
 		});
 
 		//		修改背景颜色
 		Dom.js_bk_container_color_1.click(function() {
 			init_reader_bg_color = "#FFCCCC";
 			$("body").css("background-color", init_reader_bg_color);
-			Util.StorageSetter("reader_bg_color", init_reader_bg_color);
+			Util().StorageSetter("reader_bg_color", init_reader_bg_color);
 
 		});
 		Dom.js_bk_container_color_2.click(function() {
 			init_reader_bg_color = "#003366";
 			$("body").css("background-color", init_reader_bg_color);
-			Util.StorageSetter("reader_bg_color", init_reader_bg_color);
+			Util().StorageSetter("reader_bg_color", init_reader_bg_color);
 		});
 		Dom.js_bk_container_color_3.click(function() {
-			init_reader_bg_color = "#CCCCCC";
+			init_reader_bg_color = "#e9dfc7";
 			$("body").css("background-color", init_reader_bg_color);
-			Util.StorageSetter("reader_bg_color", init_reader_bg_color);
+			Util().StorageSetter("reader_bg_color", init_reader_bg_color);
 		});
 		Dom.js_bk_container_color_4.click(function() {
 			init_reader_bg_color = "#333399";
 			$("body").css("background-color", init_reader_bg_color);
-			Util.StorageSetter("reader_bg_color", init_reader_bg_color);
+			Util().StorageSetter("reader_bg_color", init_reader_bg_color);
 		});
 
 		//		点击唤醒菜单功能
@@ -218,6 +267,21 @@ window.onload = function() {
 			Dom.top_nav.css("display", "none");
 			Dom.foot_nav.css("display", "none");
 			Dom.js_nav_pannel.css("display", "none");
+			Dom.js_font_change.find("img").attr("src", font_change_img);
+		});
+
+		$("#prev_button").click(function() {
+			//			获得章节数据>渲染数据
+			readerModel.prevChapter(function(data) {
+				readUI(data);
+			});
+
+		});
+		$("#next_button").click(function() {
+			readerModel.nextChapter(function(data) {
+				readUI(data);
+			});
+
 		});
 	}
 
