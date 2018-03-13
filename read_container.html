@@ -1,98 +1,1 @@
-<!DOCTYPE html>
-<html ng-app="app">
-
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta name="format-detection" content="telephone=no" />
-		<!-- 设置数字格式，让数字出现不显示为电话号码 -->
-		<link rel="stylesheet" href="css/reset.css" />
-		<script src="js/read_container.js"></script>
-		<script src="js/jquery.min.js" type="application/javascript"></script>
-		<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>-->
-		<link rel="stylesheet" href="css/read_container.css" />
-
-	</head>
-
-	<body>
-		<div id="root" class="container">
-
-			<div id="" class="m-article-action">
-				<div class="article-action-mid" id="action_mid"></div>
-			</div>
-
-			<div id="top-nav" class="top-nav" style="display: none;">
-				<div id="" class="icon-back"></div>
-				<div id="" class="nav-title">
-					返回书架
-				</div>
-			</div>
-			<div id="fiction_chapter_title"></div>
-			<div id="fiction_container" class="m-read-content">
-			</div>
-			<!--底部功能按钮-->
-			<div class="m-button-bar">
-				<ul class="u-tab">
-					<li id="prev-button">上一章</li>
-					<li id="next-button">下一章</li>
-				</ul>
-			</div>
-			<!--底部菜单-->
-			<div class="nav-pannel-bk js-nav-pannel" style="display: none;"></div>
-			<div class="nav-pannel js-nav-pannel" id="font-container" style="display: none;">
-				<div class="child-mod">
-					<span>字号</span>
-					<button id="large-font" class="font-size-button">大</button>
-					<button id="small-font" class="font-size-button">小</button>
-				</div>
-				<div class="child-mod">
-					<span>背景</span>
-					<div class="bk-container">
-						<div class="bk-container-current js-bk-container-color-1"></div>
-					</div>
-					<div class="bk-container">
-						<div class="bk-container-current js-bk-container-color-2"></div>
-					</div>
-					<div class="bk-container">
-						<div class="bk-container-current js-bk-container-color-3"></div>
-					</div>
-					<div class="bk-container">
-						<div class="bk-container-current js-bk-container-color-4"></div>
-					</div>
-				</div>
-			</div>
-			<!--底部菜单导航栏-->
-			<div id="foot-nav" class="foot-nav" style="display: none;">
-				<div class="footer-nav js-menu" id="">
-					<div class="footer-nav-img js-menu-img"><img src="" alt="" /></div>
-					<div class="footer-nav-font">
-						目 录
-					</div>
-				</div>
-				<div class="footer-nav js-font" id="font-change">
-					<div class="footer-nav-img js-font-change"><img src="" alt="" /></div>
-					<div class="footer-nav-font">
-						字 体
-					</div>
-				</div>
-				<div class="footer-nav js-day-night" id="day-night">
-					<div class="footer-nav-img js-night-img"><img src="" alt="" /></div>
-					<div class="footer-nav-font js-night-font">
-						夜 间
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-	</body>
-	<!--格式识别-->
-	<script src="js/jquery.base64.js"></script>
-	<script type="text/javascript">
-		//防止 js 包未加载
-		window.jQuery = $;
-	</script>
-	<script src="js/jquery.jsonp.js"></script>
-	<script src="lib/zepto.min.js"></script>
-
-</html>
+<!DOCTYPE html><html ng-app="app">	<head>		<meta charset="utf-8" />		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />		<meta name="format-detection" content="telephone=no" />		<!-- 设置数字格式，让数字出现不显示为电话号码 -->		<link rel="stylesheet" href="css/reset.css" />		<script src="js/read_container.js"></script>		<script src="js/jquery.min.js" type="application/javascript"></script>		<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>-->		<link rel="stylesheet" href="css/read_container.css" />	</head>	<body>		<div id="root" class="container">			<div id="" class="m-article-action">				<div class="article-action-mid" id="action_mid"></div>			</div>			<div id="top-nav" class="top-nav" style="display: none;">				<div id="" class="icon-back"></div>				<div id="" class="nav-title">					返回书架				</div>			</div>			<div id="fiction_chapter_title"></div>			<div id="fiction_container" class="m-read-content">			</div>			<!--底部功能按钮-->			<div class="m-button-bar">				<ul class="u-tab">					<li id="prev-button">上一章</li>					<li id="next-button">下一章</li>				</ul>			</div>			<!--底部菜单-->			<div class="nav-pannel-bk js-nav-pannel" style="display: none;"></div>			<div class="nav-pannel js-nav-pannel" id="font-container" style="display: none;">				<div class="child-mod">					<span>字号</span>					<button id="large-font" class="font-size-button">大</button>					<button id="small-font" class="font-size-button">小</button>				</div>				<div class="child-mod">					<span>背景</span>					<div class="bk-container">						<div class="bk-container-current js-bk-container-color-1"></div>					</div>					<div class="bk-container">						<div class="bk-container-current js-bk-container-color-2"></div>					</div>					<div class="bk-container">						<div class="bk-container-current js-bk-container-color-3"></div>					</div>					<div class="bk-container">						<div class="bk-container-current js-bk-container-color-4"></div>					</div>				</div>			</div>			<!--底部菜单导航栏-->			<div id="foot-nav" class="foot-nav" style="display: none;">				<div class="footer-nav js-menu" id="">					<div class="footer-nav-img js-menu-img"><img src="" alt="" /></div>					<div class="footer-nav-font">						目 录					</div>				</div>				<div class="footer-nav js-font" id="font-change">					<div class="footer-nav-img js-font-change"><img src="" alt="" /></div>					<div class="footer-nav-font">						字 体					</div>				</div>				<div class="footer-nav js-day-night" id="day-night">					<div class="footer-nav-img js-night-img"><img src="" alt="" /></div>					<div class="footer-nav-font js-night-font">						夜 间					</div>				</div>			</div>		</div>		</div>	</body>	<!--格式识别-->	<script src="js/jquery.base64.js"></script>	<script type="text/javascript">		//防止 js 包未加载		window.jQuery = $;	</script>	<script src="js/jquery.jsonp.js"></script>	<script src="lib/zepto.min.js"></script></html>

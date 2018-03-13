@@ -9,9 +9,10 @@ body {
 	width: 100%;
 	overflow: hidden;
 	background: #e9dfc7;
-	min-width: 400px;
-	max-width: 800px;
+	/*min-width: 400px;
+	max-width: 800px;*/
 }
+
 
 .m-read-content {
 	font-size: 14px;
@@ -27,7 +28,7 @@ body {
 	border-bottom: solid 1px #736357;
 	letter-spacing: 2px;
 	/*字符间距*/
-	margin: 0 0 1em 0;
+	margin: 0 0 1rem 0;
 }
 
 .m-read-content p {
