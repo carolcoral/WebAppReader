@@ -10,7 +10,10 @@
 ## 项目目录结构
 
 .
-+--
-+--
++-- css
+| +-- copycode.txt
+| +-- read_container.css
+| +-- reset.css
++-- js
 | +--
 | +--
