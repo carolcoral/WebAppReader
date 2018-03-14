@@ -14,13 +14,23 @@
 |    |-- copycode.txt
 |    |-- read_container.css
 |    |-- reset.css
+|
 |-- js
-|----
-|----
+|    |-- jquery.base64.js
+|    |-- jquery.jsonp.js
+|    |-- jquery.min.js
+|    |-- read_container.js
+|
 |-- data
-|----
-|----
+|    |-- chapter.json
+|    |-- data0.json
+|    |-- data1.json
+|    |-- data2.json
+|    |-- data3.json
+|
 |-- lib
-|---- zepto.min.js
+|    |-- zepto.min.js
+|
 |-- read_container.html
+
 ```
