@@ -8,13 +8,19 @@
 * 模拟后台数据使用 EJS 模版的路由功能以及 node.js；
 
 ## 项目目录结构
-<code>
+```
 .
-+-- css
-| +-- copycode.txt
-| +-- read_container.css
-| +-- reset.css
-+-- js
-| +--
-| +--
-</code>
+|-- css
+|    |-- copycode.txt
+|    |-- read_container.css
+|    |-- reset.css
+|-- js
+|----
+|----
+|-- data
+|----
+|----
+|-- lib
+|---- zepto.min.js
+|-- read_container.html
+```
