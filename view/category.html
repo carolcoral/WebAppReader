@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/static/css/all.css"/>
+	<title></title>
+</head>
+<body>
+	<div id="root">
+		<div class="Swipe Swipe_full Destructor">
+			<div style="width:100%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+				<div style="width: 100%">
+					<% include include/common-header.html %>
+					<div class="Swipe Swipe_full container-scroll Destructor">
+						<div style="width: 200%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+							<div style="width: 100%" >
+								<div id="app">
+									<div class="new-page cate-page" data-track="ca">
+										<main class="u-area">
+											<section class="m-cat-male">
+												<div class="u-ttl u-ttl-icn"> <em class="icn-catagory1"></em>
+													<h1>网文男频</h1>
+												</div>
+												<ul class="u-list-2col">
+													<li v-for="item in male">
+														<div class="u-cat-item" style="background-image:url({{item.new_image}}!m);">
+															<h3>{{item.label}}</h3>
+															<p class="num">{{item.fiction_count}}</p>
+														</div>
+													</li>
+												</ul>
+											</section>
+											<section class="m-cat-female">
+												<div class="u-ttl u-ttl-icn"> <em class="icn-catagory2"></em>
+													<h1>网文女频</h1>
+												</div>
+												<ul class="u-list-2col">
+													<li v-for="item in female">
+														<div class="u-cat-item" style="background-image:url({{item.new_image}}!m);">
+															<h3>{{item.label}}</h3>
+															<p class="num">{{item.fiction_count}}</p>
+														</div>
+													</li>
+												</ul>
+											</section>
+										</main>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/static/script/vue.js"></script>
+	<script src="/static/script/zepto.js"></script>
+	<script src="/static/script/pages/category.js"></script>
+</body>
+</html>

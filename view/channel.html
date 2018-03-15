@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/static/css/all.css"/>
+	<title></title>
+</head>
+<body>
+	<div id="root">
+		<div class="Swipe Swipe_full Destructor">
+			<div style="width: 734px; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+				<div style="width: 734px;">
+					<% include include/common-header.html %>
+					<div class="Swipe Swipe_full container-scroll Destructor">
+						<div style="width: 1468px; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+							<div style="width: 734px;" >
+								<div class="new-page channel-page" id="app">
+									<section class="channel-group main-card" v-for="section in items">
+										<div class="channel-group__header">
+											<h2 class="channel-group__title channel-group__title_left">{{section.ad_name}}</h2>
+										</div>
+										<ul class="book-list">
+											<li data-track="0" v-for="book in section.data.data">
+												<div class="u-book">
+													<div class="cnt">
+														<div class="book-cover">
+															<img alt="{{ book.title }}" v-bind:src="book.cover">
+															<div class="u-tagRT"></div>
+														</div>
+														<div class="info">
+															<h3 class="title single-line">{{ book.title }}</h3>
+															<p class="summary">{{ book.summary }}</p>
+															<div class="wrap">
+																<div class="book-tag" v-for="tag in book.tags">{{ tag }}</div>
+												
+																<p class="author single-line">
+																	<span class="author">{{ book.authors }}</span>
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</section>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/static/script/vue.js"></script>
+	<script src="/static/script/zepto.js"></script>
+	<script src="/static/script/pages/channel.js"></script>
+</body>
+</html>

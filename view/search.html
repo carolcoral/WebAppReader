@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/static/css/all.css"/>
+	<title></title>
+</head>
+<body>
+	<div id="root">
+		<div class="Swipe Swipe_full Destructor">
+			<div style="width: 734px; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+				<div style="width: 734px;">
+					<% include include/common-header.html %>
+					<div class="Swipe Swipe_full container-scroll Destructor">
+						<div style="width: 1468px; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+							<div style="width: 734px;" id="app_search">
+								<div class="search">
+									<div class="top">
+										<a href="javascript:history.back()" class="top__back"></a>
+										<div id="search-input" class="search-input"> <b class="search-input__mi"></b>
+											<input type="text" value="" id="search_box" placeholder="输入书名/作者/关键字">
+											<div class="search-input__btn" v-on:click="doSearch" >搜索</div>
+										</div>
+									</div>
+									<div class="top__bd" v-show="condition">
+										<div>
+											<ul class="m-tag -color search-tag">
+												<li class="u-tag" id="Tag__128">我的绝美女神老婆</li>
+												<li class="u-tag" id="Tag__129">复仇千金</li>
+												<li class="u-tag" id="Tag__130">盗墓</li>
+												<li class="u-tag" id="Tag__131">豪门小老婆</li>
+												<li class="u-tag" id="Tag__132">庶女</li>
+												<li class="u-tag" id="Tag__133">神医</li>
+												<li class="u-tag" id="Tag__134">魔兽</li>
+												<li class="u-tag" id="Tag__135">我的老婆是双胞胎</li>
+											</ul>
+										</div>
+									</div>
+									<div class="top__bd" v-show="!condition">
+										<ul class="book-list">
+											<li v-for="item in search">
+												<div class="u-book">
+													<div class="cnt">
+														<div class="book-cover">
+															<img alt="{{ item.title }}" v-bind:src="item.cover">
+															<div class="u-tagRT"></div>
+														</div>
+														<div class="info">
+															<h3 class="title single-line">{{ item.title }}</h3>
+															<p class="summary">{{ item.intro }}</p>
+															<div class="wrap">
+																<p class="author single-line">
+																	<span>{{ item.authors }}</span>
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="ListView ListView_complete" v-show="empty">
+											<div class="ListView__empty">
+												<p class="u-tip">没有相应的搜索结果</p>
+											</div>
+											<div class="ListView__complete"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script src="/static/script/vue.js"></script>
+		<script src="/static/script/zepto.js"></script>
+		<script src="/static/script/pages/search.js"></script>
+</body>
+	</html>

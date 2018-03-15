@@ -1,0 +1,307 @@
+{
+	items: [{
+		ad: 0,
+		word_count: 999756,
+		owner: 0,
+		allow_discount: 0,
+		ad_time: 3,
+		click: 8561542,
+		score_count: 600,
+		title: "先婚厚爱",
+		on_sale: true,
+		comment_count: 61,
+		ad_duration: 5,
+		latest_id: 253,
+		score: 8.41,
+		allow_free_read: 1,
+		rights_id: 10039,
+		channel: [
+			2
+		],
+		updated: 1465813422,
+		finish: true,
+		tags: [
+			"现言",
+			"都市言情"
+		],
+		price: 5,
+		chapter_count: 254,
+		authors: "莫萦",
+		categories: [{
+			category_id: 100000,
+			label: "现代言情"
+		}, {
+			category_id: 100100,
+			label: "都市言情"
+		}, {
+			category_id: 18000000,
+			label: "现代言情"
+		}, {
+			category_id: 18000100,
+			label: "都市生活"
+		}],
+		rights: "潇湘书院",
+		level: 0,
+		cover: "http://cover.read.duokan.com/mfsv2/download/s010/p017Bgr0t7WU/iYz4mtvYjzwZjO.jpg",
+		summary: "江城第一把手被她误以为相亲对象，身为剩女的她第一句话：“去领证吗？”",
+		fiction_id: 46509,
+		outer_id: "53e2dde80ea497276b5a2f06",
+		latest: "番外宝贝女儿"
+	}, {
+		ad: 0,
+		word_count: 4792595,
+		owner: 0,
+		allow_discount: false,
+		ad_time: 3,
+		click: 106686189,
+		score_count: 12305,
+		title: "七界武神",
+		on_sale: true,
+		comment_count: 308,
+		ad_duration: 5,
+		latest_id: 1535,
+		score: 8.36,
+		allow_free_read: 1,
+		rights_id: 10080,
+		channel: [
+			1
+		],
+		updated: 1468301457,
+		finish: false,
+		tags: [
+			"七界武神",
+			"武魂",
+			"叶天",
+			"异世大陆",
+			"玄幻",
+			"异界大陆",
+			"玄幻奇幻"
+		],
+		price: 5,
+		chapter_count: 1536,
+		authors: "叶之凡",
+		categories: [{
+			category_id: 10000,
+			label: "玄幻奇幻"
+		}, {
+			category_id: 10200,
+			label: "异世大陆"
+		}, {
+			category_id: 1000000,
+			label: "玄幻"
+		}, {
+			category_id: 1000200,
+			label: "异界大陆"
+		}],
+		rights: "阅文集团旗下创世中文网",
+		level: 0,
+		cover: "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01DMhyt0Zkm/sf6mdPxWm06zcc.jpg",
+		summary: "华夏特种兵穿越武者世界，得到上古魔祖吞噬魔功，练成了吞噬体质，从而踏上巅峰，横扫天下！",
+		fiction_id: 270794,
+		outer_id: "558233a550e3a4738f4c81d4",
+		latest: "第一千五百三十四章 圣主陨落"
+	}, {
+		ad: 0,
+		word_count: 786451,
+		owner: 0,
+		allow_discount: 0,
+		ad_time: 3,
+		click: 2451425,
+		score_count: 83,
+		title: "宠妃难为",
+		on_sale: true,
+		comment_count: 0,
+		ad_duration: 5,
+		latest_id: 161,
+		score: 8.62,
+		allow_free_read: 1,
+		rights_id: 20004,
+		channel: [
+			2
+		],
+		updated: 1439007915,
+		finish: true,
+		tags: [
+			"原创",
+			"言情",
+			"爱情",
+			"古典架空",
+			"架空历史",
+			"古代言情"
+		],
+		price: 3,
+		chapter_count: 162,
+		authors: "碧云天",
+		categories: [{
+			category_id: 110000,
+			label: "古代言情"
+		}, {
+			category_id: 110100,
+			label: "架空历史"
+		}, {
+			category_id: 17000000,
+			label: "古代言情"
+		}, {
+			category_id: 17000200,
+			label: "古典架空"
+		}],
+		rights: "晋江文学",
+		level: 0,
+		cover: "http://cover.read.duokan.com/mfsv2/download/s010/p018NN4CqhaC/BmIs9AONWa0zsO.jpg",
+		summary: "十七岁，仟夕瑶进宫两年，无宠，想的不过是怎么逃离这后宫，结果那许多嫔肚子里没有消息，她却一下子蹦出个...",
+		fiction_id: 308833,
+		outer_id: "55c18acf50e3a4299f2b569c",
+		latest: "第 162 章"
+	}, {
+		ad: 0,
+		word_count: 6422470,
+		owner: 0,
+		allow_discount: false,
+		ad_time: 3,
+		click: 15451173,
+		score_count: 5217,
+		title: "完美世界",
+		on_sale: true,
+		comment_count: 240,
+		ad_duration: 5,
+		latest_id: 2031,
+		score: 9.07,
+		allow_free_read: 1,
+		rights_id: 10080,
+		channel: [
+			1
+		],
+		updated: 1468265441,
+		finish: false,
+		tags: [
+			"玄幻奇幻",
+			"玄幻",
+			"东方玄幻"
+		],
+		price: 5,
+		chapter_count: 2032,
+		authors: "辰东",
+		categories: [{
+			category_id: 10000,
+			label: "玄幻奇幻"
+		}, {
+			category_id: 10100,
+			label: "东方玄幻"
+		}, {
+			category_id: 1000000,
+			label: "玄幻"
+		}, {
+			category_id: 1000100,
+			label: "东方玄幻"
+		}],
+		rights: "阅文集团旗下起点中文网",
+		level: 0,
+		cover: "http://cover.read.duokan.com/mfsv2/download/s010/p01CBWdv06tQ/0wQb35pmpRhaIr.jpg",
+		summary: "一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大...",
+		fiction_id: 270644,
+		outer_id: "558142d650e3a4079d15aab3",
+		latest: "请假，暂停一天"
+	}, {
+		ad: 0,
+		word_count: 1842693,
+		owner: 0,
+		allow_discount: 0,
+		ad_time: 3,
+		click: 549763,
+		score_count: 138,
+		title: "重生之国民男神",
+		on_sale: true,
+		comment_count: 0,
+		ad_duration: 5,
+		latest_id: 432,
+		score: 9.6,
+		allow_free_read: 1,
+		rights_id: 10039,
+		channel: [
+			2
+		],
+		updated: 1466750712,
+		finish: false,
+		tags: [
+			"重生之国民男神",
+			"现代言情",
+			"都市言情",
+			"都市生活"
+		],
+		price: 5,
+		chapter_count: 433,
+		authors: "水千澈",
+		categories: [{
+			category_id: 100000,
+			label: "现代言情"
+		}, {
+			category_id: 100100,
+			label: "都市言情"
+		}, {
+			category_id: 18000000,
+			label: "现代言情"
+		}, {
+			category_id: 18000100,
+			label: "都市生活"
+		}],
+		rights: "潇湘书院",
+		level: 0,
+		cover: "http://cover.read.duokan.com/mfsv2/download/s010/p01OKCgsrZfq/3IzTun8ZP3Yrud.jpg",
+		summary: "前生司凰被至亲控制陷害，贵为连冠影帝，却死无葬身之地。意外重生，再回起点，获得古怪传承。司凰摸着下巴...",
+		fiction_id: 317733,
+		outer_id: "569e9d8150e3a468e9b8ec23",
+		latest: "不爱你还能爱谁"
+	}, {
+		ad: 0,
+		word_count: 1441873,
+		owner: 0,
+		allow_discount: false,
+		ad_time: 3,
+		click: 31431177,
+		score_count: 8745,
+		title: "盗墓笔记",
+		on_sale: true,
+		comment_count: 1927,
+		ad_duration: 5,
+		latest_id: 481,
+		score: 8.99,
+		allow_free_read: 1,
+		rights_id: 10080,
+		channel: [
+			1
+		],
+		updated: 1450801819,
+		finish: true,
+		tags: [
+			"升级练功",
+			"盗墓探险",
+			"盗墓",
+			"热血",
+			"灵异悬疑"
+		],
+		price: 5,
+		chapter_count: 482,
+		authors: "南派三叔",
+		categories: [{
+			category_id: 50000,
+			label: "灵异悬疑"
+		}, {
+			category_id: 50400,
+			label: "盗墓探险"
+		}, {
+			category_id: 8000000,
+			label: "灵异"
+		}, {
+			category_id: 8000300,
+			label: "悬疑探险"
+		}],
+		rights: "阅文集团旗下起点中文网",
+		level: 0,
+		cover: "http://cover.read.duokan.com/mfsv2/download/s010/p01yfPOuJRok/dQJSYfAnD3AB42.jpg",
+		summary: "这神秘的墓主人到底是谁，他们到底能不能找到真正的棺椁？",
+		fiction_id: 270635,
+		outer_id: "5581401c50e3a4079e15a4f9",
+		latest: "《后记》下"
+	}],
+	result: 0
+}

@@ -1,0 +1,45 @@
+<section class="channel-h5">
+	<div class="channel-h5__header">
+		<p class="channel-h5__title">
+			重磅推荐<i>推</i>
+		</p>
+		<div class="tab">
+			<a href="javascript:" class="tab__on">男</a>
+			<a href="javascript:">女</a>
+		</div>
+	</div>
+	<ul class="list-h5">
+		<li v-for="item in recommend" v-if="$index==0">
+		  <a href="/book?id={{ item.fiction_id }}">
+			<div class="book-h5">
+				<div class="book-h5__cover">
+					<img alt="{{ item.title }}" v-bind:src="item.cover">
+					<p class="book-h5__finish">完结</p>
+				</div>
+				<div class="book-h5__info">
+					<p class="book-h5__title">{{ item.title }}</p>
+					<p class="book-h5__author">{{ item.authors }}</p>
+					<p class="book-h5__summary">{{ item.summary }}</p>
+					<div class="book-h5__wrap">
+						<div class="book-h5__tag" v-for="tag in item.tags">{{ tag }}</div>
+					</div>
+				</div>
+			</div>
+			</a>
+		</li>
+		<li v-for="item in recommend" v-if="$index>0 && $index<9">
+			<a href="/book?id={{ item.fiction_id }}">
+			<div class="book-h5 book-h5__no-img">
+				<span class="book-h5_no-img__order">0{{ $index }}</span>
+				<div class="book-h5_no-img__info">
+					<p class="book-h5_no-img__title">
+						{{ item.title }}
+					</p>
+				</div>
+			</div>
+			</a>
+		</li>
+
+
+	</ul>
+</section>
