@@ -9,42 +9,80 @@
 
 ## 项目目录结构
 ```
-.
+~
 |-- mock
 |    |-- book
 |           |-- 18218.json
 |    |-- channel
-|           |-- include
-|           |-- include
-|           |-- include
-|           |-- include
-|           |-- include
+|           |-- female.json
+|           |-- male.json
 |    |-- reader
-|           |-- include
-|           |-- include
-|           |-- include
-|           |-- include
-|           |-- include
-|    |-- reader
+|           |-- data
+|               |-- data1.json
+|               |-- data2.json
+|               |-- data3.json
+|               |-- data4.json
+|           |-- chapter.json
+|    |-- bookbacket.json
+|    |-- category.json
+|    |-- home.json
+|    |-- rank.json
+|    |-- test.json
 |
 |-- node_modules
 |    |-- *
 |
 |-- service
-|    |-- *
+|    |-- webAppService.js
 |
 |-- static
 |    |-- css
+|           |-- all.css
+|           |-- reset.css
+|           |-- index.css
+|    |-- img
+|           |-- back.png
+|           |-- female.png
+|           |-- male.png
+|           |-- category.png
+|           |-- rank.png
 |    |-- script
+|           |-- pages
+|               |-- book.js
+|               |-- category.js
+|               |-- channel.js
+|               |-- index.js
+|               |-- rank.js
+|               |-- search.js
+|           |-- jquery.base64.js
+|           |-- vue.js
+|           |-- zepto.js
+|           |-- jquery.jsonp.js
+|    |-- test.js
 |
 |-- view
 |    |-- include
-|           |-- include
-|           |-- include
-|           |-- include
-|           |-- include
-|           |-- include
-|    |-- include
+|           |-- common-header.html
+|           |-- header.html
+|           |-- index-female.html
+|           |-- index-hot.html
+|           |-- index-free.html
+|           |-- index-bottom.html
+|           |-- index-recommend.html
+|           |-- index-male.html
+|           |-- index-self.html
+|           |-- index-top.html
+|    |-- book.html
+|    |-- category.html
+|    |-- channel.html
+|    |-- female.html
+|    |-- index.html
+|    |-- male.html
+|    |-- rank.html
+|    |-- reader.html
+|    |-- search.html
+|    |-- test.html
+|    |-- user-center.html
 |
 |-- app.js
 |-- package.json
