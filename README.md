@@ -1,5 +1,7 @@
 # WebAppReader
 
+* [DownLoad](https://raw.githubusercontent.com/carolcoral/WebAPP/master/__W2A__webreader.cnkj.site_0316145117.apk)
+
 > 基于 html5 和 Vue.js 的手机小说阅读器 
 >> [https://carolcoral.github.io/WebAPP](https://carolcoral.github.io/WebAPP)
 
