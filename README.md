@@ -12,11 +12,7 @@
 .
 |-- mock
 |    |-- book
-|           |-- 1
-|           |-- include
-|           |-- include
-|           |-- include
-|           |-- include
+|           |-- 18218.json
 |    |-- channel
 |           |-- include
 |           |-- include
