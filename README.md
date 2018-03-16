@@ -10,27 +10,47 @@
 ## 项目目录结构
 ```
 .
-|-- css
-|    |-- copycode.txt
-|    |-- read_container.css
-|    |-- reset.css
+|-- mock
+|    |-- book
+|           |-- 1
+|           |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|    |-- channel
+|           |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|    |-- reader
+|           |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|    |-- reader
 |
-|-- js
-|    |-- jquery.base64.js
-|    |-- jquery.jsonp.js
-|    |-- jquery.min.js
-|    |-- read_container.js
+|-- node_modules
+|    |-- *
 |
-|-- data
-|    |-- chapter.json
-|    |-- data0.json
-|    |-- data1.json
-|    |-- data2.json
-|    |-- data3.json
+|-- service
+|    |-- *
 |
-|-- lib
-|    |-- zepto.min.js
+|-- static
+|    |-- css
+|    |-- script
 |
-|-- read_container.html
+|-- view
+|    |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|           |-- include
+|    |-- include
+|
+|-- app.js
+|-- package.json
 
 ```
