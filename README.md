@@ -93,5 +93,6 @@
 1. 安装插件的配置信息已经包含在 package.json 文件中；
 2. 打开控制终端，切换到项目文件下；
 3. >touch package.json
-4. vim package.json，复制项目总 package.json 中的内容进去；
-5. node package.json
+4. >vim package.json
+5. 复制项目总 package.json 中的内容进去；
+6. >node package.json
