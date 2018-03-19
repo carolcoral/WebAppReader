@@ -116,20 +116,20 @@
 
 ### 注意：
 
->当使用<code> node app.js</code>开启服务后，关闭控制终端服务会同时关闭，若想要服务一直在后台运行，请使用命令<code>node app.js forever pm2</code>
+>当使用<code> node app.js</code>开启服务后，关闭控制终端服务会同时关闭，若想要服务一直在后台运行，请使用命令<code>node app.js forever pm2</code>，如果使用<code>forever pm2</code>命令后断开 ssh 连接网站被关闭的问题，可以尝试使用下面这条指令<code>nohup node app.js &</code>，其中 & 是为了某些不是守护进程加上的。使用该命令后回车，然后输入<code>exit;</code>即可断开 ssh 连接，然后再退出终端，此时站点依然在服务器后台运行，并没有关闭。
 
 ## Issues
 ### 1.端口占用
  * Windows 系统：
  
-  1. 在控制终端输入<code>netstat -ano|findstr "端口"</code> ,查找占用了该端口的 PID；
-  
-  2. 输入<code> taskkill /f /pid 占用的pid号 </code>，强制关闭该 PID。
-  
-  3. 或者直接修改 app.js 中的监听端口，然后重启服务。
+      1. 在控制终端输入<code>netstat -ano|findstr "端口"</code> ,查找占用了该端口的 PID；
+
+      2. 输入<code> taskkill /f /pid 占用的pid号 </code>，强制关闭该 PID。
+
+      3. 或者直接修改 app.js 中的监听端口，然后重启服务。
   
  * Ubuntu 系统：
- 
-  1. 终端输入<code>netstat -ap | grep 端口</code>，查询占用端口的 PID；
-  
-  2. 输入<code>kill -9 PID</code>终止占用端口的 PID。
+
+      1. 终端输入<code>netstat -ap | grep 端口</code>，查询占用端口的 PID；
+
+      2. 输入<code>kill -9 PID</code>终止占用端口的 PID。
