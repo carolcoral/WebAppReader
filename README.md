@@ -124,7 +124,7 @@
  
   1. 在控制终端输入<code>netstat -ano|findstr "端口"</code> ,查找占用了该端口的 PID；
   
-  2. 输入 taskkill /f /pid 占用的pid号，强制关闭该 PID。
+  2. 输入<code> taskkill /f /pid 占用的pid号 </code>，强制关闭该 PID。
   
   3. 或者直接修改 app.js 中的监听端口，然后重启服务。
   
