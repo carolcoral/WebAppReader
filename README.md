@@ -112,8 +112,14 @@
 
 ## Issues
 ### 1.端口占用
+ * Windows 系统：
   1. 在控制终端输入<code>netstat -ano|findstr "端口"</code> ,查找占用了该端口的 PID；
   
   2. 输入 taskkill /f /pid 占用的pid号，强制关闭该 PID。
   
   3. 或者直接修改 app.js 中的监听端口，然后重启服务。
+  
+ * Ubuntu 系统：
+  1. 终端输入<code>netstat -ap | grep 端口</code>，查询占用端口的 PID；
+  
+  2. 输入<code>kill -9 PID</code>终止占用端口的 PID。
