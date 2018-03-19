@@ -105,3 +105,8 @@
 3. >node app.js
 4. 在浏览器中输入地址：localhost:端口即可进入项目首页；
 5. 端口修改在 app.js 文件中的 <code>app.listen:端口</code>进行修改
+
+## Issues
+### 端口占用
+  1. 在控制终端输入<code>netstat -ano|findstr "端口"</code> ,查找占用了该端口的 PID；
+  2. 输入 taskkill /f /pid 占用的pid号，强制关闭该 PID。
