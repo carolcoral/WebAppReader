@@ -3,6 +3,10 @@
 > 基于 html5 和 Vue.js 的手机小说阅读器 
 >> [https://carolcoral.github.io/WebAPP](https://carolcoral.github.io/WebAPP)
 
+## 版权
+
+>请注明代码来源和版权所属！@Copyright CarolLiu
+
 ## DownLoad 下载
 
 * [安卓版本](https://raw.githubusercontent.com/carolcoral/WebAPP/master/WebAppReader.apk)
