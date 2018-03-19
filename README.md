@@ -114,6 +114,10 @@
 4. 在浏览器中输入地址：localhost:端口即可进入项目首页；
 5. 端口修改在 app.js 文件中的 <code>app.listen:端口</code>进行修改
 
+### 注意：
+
+>当使用<code> node app.js</code>开启服务后，关闭控制终端服务会同时关闭，若想要服务一直在后台运行，请使用命令<code>node app.js forever pm2</code>
+
 ## Issues
 ### 1.端口占用
  * Windows 系统：
