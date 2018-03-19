@@ -102,6 +102,6 @@
 ## 启动并使用项目
 1. 打开控制终端；
 2. 切换路径到 WebAppReader 的当前路径下；
-3. <code>node app.js</code>
+3. >node app.js
 4. 在浏览器中输入地址：localhost:端口即可进入项目首页；
 5. 端口修改在 app.js 文件中的 <code>app.listen:端口</code>进行修改
